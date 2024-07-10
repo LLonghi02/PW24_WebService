@@ -16,23 +16,18 @@ Including another URLconf
 """
 from django.contrib import admin # type: ignore
 from django.urls import path # type: ignore
-from myapp.views import ( # type: ignore
-    cittadini_list,
-    ospedali_list,
-    ricoveri_list,
-    patologie_list,
-    patologie_ricovero_list,
-    patologie_croniche_list,
-    patologie_mortali_list,
-)
+
+
+from django.urls import path
+from . import views
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('cittadini/', cittadini_list),
-    path('ospedali/', ospedali_list),
-    path('ricoveri/', ricoveri_list),
-    path('patologie/', patologie_list),
-    path('patologie_ricovero/', patologie_ricovero_list),
-    path('patologie_croniche/', patologie_croniche_list),
-    path('patologie_mortali/', patologie_mortali_list),
+    path('cittadini/', views.cittadini_list, name='cittadini_list'),
+    path('ospedali/', views.ospedali_list, name='ospedali_list'),
+    path('ricoveri/', views.ricoveri_list, name='ricoveri_list'),
+    path('patologie/', views.patologie_list, name='patologie_list'),
+    path('patologie-ricovero/', views.patologie_ricovero_list, name='patologie_ricovero_list'),
+    path('patologie-croniche/', views.patologie_croniche_list, name='patologie_croniche_list'),
+    path('patologie-mortali/', views.patologie_mortali_list, name='patologie_mortali_list'),
+    path('migra-dati/', views.migrazione_dati, name='migra-dati'),
 ]
