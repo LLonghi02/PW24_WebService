@@ -1,0 +1,9 @@
+<servlet>
+    <servlet-name>servletSanitario</servlet-name>
+    <servlet-class>com.example.SanitarioServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+    <servlet-name>servletSanitario</servlet-name>
+    <url-pattern>/servletSanitario/*</url-pattern>
+</servlet-mapping>
