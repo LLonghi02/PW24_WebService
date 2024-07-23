@@ -1,5 +1,3 @@
-# importer/models.py
-
 from django.db import models
 
 class Cittadino(models.Model):
@@ -56,3 +54,4 @@ class PatologiaRicovero(models.Model):
 
     class Meta:
         unique_together = ('codOspedale', 'codRicovero', 'codPatologia')
+

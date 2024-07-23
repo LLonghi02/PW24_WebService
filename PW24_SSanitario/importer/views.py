@@ -1,8 +1,11 @@
+
 from django.shortcuts import render
+from django.views.decorators.csrf import csrf_exempt
 import requests
 from django.http import JsonResponse
 from .models import Cittadino, Ospedale, Ricovero, Patologia, PatologiaRicovero, PatologiaCronica, PatologiaMortale
 import json
+import logging
 
 def cittadini_list(request):
     cittadini = list(Cittadino.objects.values())
@@ -32,14 +35,19 @@ def patologie_mortali_list(request):
     patologie_mortali = list(PatologiaMortale.objects.values())
     return JsonResponse(patologie_mortali, safe=False)
 
-# Nuova view per la migrazione dei dati
-def insert_data(request):
+logger = logging.getLogger(__name__)
+
+@csrf_exempt
+def fetch_and_save(request):
+    logger.info(f"Ricevuta una richiesta: {request.method}")
+
     if request.method == 'POST':
+        logger.info("È una richiesta POST")
         # URL del web service remoto per ottenere i dati
         remote_url = 'https://servsanitariopw9.altervista.org/WS.php'
 
         try:
-            # Effettua una richiesta GET per ottenere i dati
+            # Effettua una richiesta POST per ottenere i dati
             response = requests.get(remote_url)
             response.raise_for_status()  # Solleva un'eccezione se la richiesta non ha successo
             data = response.json()
@@ -118,4 +126,5 @@ def insert_data(request):
         except Exception as e:
             return JsonResponse({"status": "errore durante l'inserimento dei dati", "error": str(e)}, status=500)
     else:
+        logger.info("Non è una richiesta POST")
         return JsonResponse({"status": "Metodo non supportato"}, status=405)
