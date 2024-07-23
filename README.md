@@ -4,3 +4,4 @@
 <h6>Longhi Lara (1079261)</br>
 Carrara Federico (1080669)</br>
 Lazzari Alessia (1078863)</h6>
+<img src="schema.png"  style="width:80%;max-width:400px;">
