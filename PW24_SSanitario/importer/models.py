@@ -39,7 +39,7 @@ class Ricovero(models.Model):
     cod = models.CharField(max_length=10, primary_key=True)
     codOspedale = models.ForeignKey(Ospedale, on_delete=models.CASCADE)
     paziente = models.ForeignKey(Cittadino, on_delete=models.CASCADE)
-    date = models.DateField()
+    data = models.DateField(null=True, blank=True)
     durata = models.IntegerField()
     motivo = models.TextField()
     costo = models.DecimalField(max_digits=10, decimal_places=2)
