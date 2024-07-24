@@ -5,3 +5,75 @@
 Carrara Federico (1080669)</br>
 Lazzari Alessia (1078863)</h6>
 <img src="schema.png"  style="width:80%;max-width:400px;">
+       <h3>Fasi per l’installazione e l’avviamento</h3>
+        <ol>
+            <li>
+                Scaricare il repository da GitHub: 
+                <a href="https://github.com/LLonghi02/PW24_WebService" target="_blank">
+                    https://github.com/LLonghi02/PW24_WebService
+                </a>
+                <ul>
+                    <li>In questa repository, premere il pulsante code → download ZIP</li>
+                    <li>Estrarre il file ZIP</li>
+                </ul>
+            </li>
+            <li>
+                Avviare Apache Tomcat
+                <ul>
+                    <li>Comando windows+R → Aprire: services.msc</li>
+                    <li>Click col tasto destro su “Apache Tomcat 10.1 Tomcat10” (o simile in base alla versione presente sul sistema) → avvia</li>
+                    <li>
+                        Copiare la cartella “Servlet” presente al percorso 
+                        <code>C:\...\PW24_WebService\PW24_SSanitario</code> 
+                        nella cartella 
+                        <code>C:\Tomcat\webapps</code> 
+                        presente nel tuo sistema
+                    </li>
+                </ul>
+            </li>
+            <li>
+                Creare un Database PostgreSQL
+                <ul>
+                    <li>Aprire “pgAdmin4”</li>
+                    <li>Aprire il tuo Server</li>
+                    <li>Fare clic con il tasto destro su Databases → Create → Database…</li>
+                    <li>Chiamare il Database “ServSanitario” e salva</li>
+                </ul>
+            </li>
+            <li>
+                Inserire i tuoi dati di accesso PostgreSQL in settings.py
+                <ul>
+                    <li>
+                        Aprire settings.py in VSC, trovabile al percorso 
+                        <code>C:\...\PW24_WebService\PW24_SSanitario\PW24_SSanitario</code>
+                    </li>
+                    <li>Modificare DATABASES alla riga 80 con il tuo USER e la tua PASSWORD</li>
+                </ul>
+            </li>
+            <li>
+                Aprire il terminale
+                <ul>
+                    <li>Fare clic con il tasto destro sulla cartella PW24_WebService appena estratta e selezionare “Apri nel terminale”</li>
+                </ul>
+            </li>
+            <li>
+                Installare le dipendenze e configurare l’ambiente
+                <ul>
+                    <li>Copiare i codici presenti nel file step_SSanitario.ipynb nella console del terminale e seguire le indicazioni</li>
+                </ul>
+            </li>
+            <li>
+                Entrare in Apache Tomcat
+                <ul>
+                    <li>Aprire il browser</li>
+                    <li>Inserire nella barra di ricerca <code>http://localhost:8080/AppWeb/servletSanitario</code></li>
+                </ul>
+            </li>
+            <li>
+                Visualizzare le tabelle migrate in PostgreSQL
+                <ul>
+                    <li>Aprire “pgAdmin4” o effettua un refresh Databases se ancora aperto dal punto 3</li>
+                    <li>Aprire il Database “ServSanitario”, creato in precedenza, estendi Schemas → public → Tables</li>
+                </ul>
+            </li>
+        </ol>
