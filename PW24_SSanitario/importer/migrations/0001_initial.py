@@ -57,7 +57,7 @@ class Migration(migrations.Migration):
             name='Ricovero',
             fields=[
                 ('cod', models.CharField(max_length=10, primary_key=True, serialize=False)),
-                ('date', models.DateField()),
+                ('data', models.DateField()),
                 ('durata', models.IntegerField()),
                 ('motivo', models.TextField()),
                 ('costo', models.DecimalField(decimal_places=2, max_digits=10)),
