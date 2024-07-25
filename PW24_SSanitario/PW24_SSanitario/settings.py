@@ -80,7 +80,7 @@ WSGI_APPLICATION = 'PW24_SSanitario.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'Prova',
+        'NAME': 'ServSanitario',
         'USER': 'postgres',
         'PASSWORD': 'password',
         'HOST': 'localhost',
