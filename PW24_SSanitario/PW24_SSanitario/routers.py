@@ -6,6 +6,6 @@ class CustomRouter:
         return None
 
     def allow_migrate(self, db, app_label, model_name=None, **hints):
-        if app_label in ['auth', 'admin', 'contenttypes', 'sessions', 'migrations']:
+        if app_label in ['auth', 'admin', 'contenttypes', 'sessions']:
             return False
         return True

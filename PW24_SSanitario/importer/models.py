@@ -54,13 +54,13 @@ class Ricovero(models.Model):
         db_table = 'Ricovero'
 
 class PatologiaRicovero(models.Model):
-    codOspedale = models.ForeignKey(Ospedale, on_delete=models.CASCADE,db_column='codOspedale')
-    codRicovero = models.ForeignKey(Ricovero, on_delete=models.CASCADE,db_column='codRicovero')
-    codPatologia = models.ForeignKey(Patologia, on_delete=models.CASCADE,db_column='codPatologia')
+    codOspedale = models.ForeignKey('Ospedale', on_delete=models.CASCADE, db_column='codOspedale')
+    codRicovero = models.ForeignKey('Ricovero', on_delete=models.CASCADE, db_column='codRicovero')
+    codPatologia = models.ForeignKey('Patologia', on_delete=models.CASCADE, db_column='codPatologia')
+
 
     class Meta:
         unique_together = ('codOspedale', 'codRicovero', 'codPatologia')
-        # Definisci la chiave primaria composta usando i campi
-
         db_table = 'PatologiaRicovero'
+        managed = False
 

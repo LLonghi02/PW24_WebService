@@ -68,7 +68,6 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='PatologiaRicovero',
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('codOspedale', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='importer.ospedale')),
                 ('codPatologia', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='importer.patologia')),
                 ('codRicovero', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='importer.ricovero')),
