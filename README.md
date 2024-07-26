@@ -40,8 +40,9 @@ Lazzari Alessia (1078863)</h6>
                 Inserire i tuoi dati di accesso PostgreSQL in settings.py
                 <ul>
                     <li>
-                        Aprire settings.py in VSC, trovabile al percorso 
+                        Aprire settings.py, situato al percorso 
                         <code>C:\...\PW24_WebService-main\PW24_SSanitario\PW24_SSanitario</code>
+                            in un editor di testo
                     </li>
                     <li>Modificare DATABASES alla riga 80 con il tuo USER e la tua PASSWORD</li>
                 </ul>
