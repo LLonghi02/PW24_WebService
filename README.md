@@ -42,7 +42,7 @@ Lazzari Alessia (1078863)</h6>
                     <li>
                         Aprire settings.py, situato al percorso 
                         <code>C:\...\PW24_WebService-main\PW24_SSanitario\PW24_SSanitario</code>
-                            in un editor di testo
+                            , in un editor di testo
                     </li>
                     <li>Modificare DATABASES alla riga 80 con il tuo USER e la tua PASSWORD</li>
                 </ul>
@@ -69,8 +69,8 @@ Lazzari Alessia (1078863)</h6>
             <li>
                 Visualizzare le tabelle migrate in PostgreSQL
                 <ul>
-                    <li>Aprire “pgAdmin4” o effettua un refresh Databases se ancora aperto dal punto 3</li>
-                    <li>Aprire il Database “ServSanitario”, creato in precedenza, estendi Schemas → public → Tables</li>
+                    <li>Aprire “pgAdmin4” o effettuare un refresh Databases se ancora aperto dal punto 3</li>
+                    <li>Aprire il Database “ServSanitario”, creato in precedenza, estendere Schemas → public → Tables</li>
                 </ul>
             </li>
         </ol>
