@@ -17,8 +17,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from importer.views import fetch_and_save
+from importer.views import migrate
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('fetch-and-save/', fetch_and_save, name='fetch_and_save'),
+    path('run-migrations/', migrate, name='run-migrations'),
 ]

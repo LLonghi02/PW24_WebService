@@ -34,7 +34,7 @@ INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
-    'django.contrib.sessions',
+    #'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'importer.apps.ImporterConfig',
@@ -80,7 +80,7 @@ WSGI_APPLICATION = 'PW24_SSanitario.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'Prova',
+        'NAME': 'ServSanitario',
         'USER': 'postgres',
         'PASSWORD': 'password',
         'HOST': 'localhost',
@@ -146,3 +146,6 @@ CORS_ALLOW_HEADERS = [
     'Content-Type',
     'Authorization',
 ]
+
+
+DATABASE_ROUTERS = ['PW24_SSanitario.routers.CustomRouter']
