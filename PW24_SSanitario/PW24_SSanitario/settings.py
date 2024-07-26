@@ -37,8 +37,8 @@ INSTALLED_APPS = [
     #'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'importer.apps.ImporterConfig',
-    'corsheaders',
+    'importer.apps.ImporterConfig', #Applicazione creata per il trasferimento dei dati
+    'corsheaders', #Applicazione per permettere di effettuare chiamate cross-domain
 ]
 
 MIDDLEWARE = [
@@ -82,9 +82,9 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'ServSanitario',
         'USER': 'postgres',
-        'PASSWORD': 'password',
+        'PASSWORD': 'password', #Da modificare in base al proprio database
         'HOST': 'localhost',
-        'PORT': '5432',
+        'PORT': '5432', #Da modificare in base al proprio database
     }
 }
 

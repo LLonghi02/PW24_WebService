@@ -1,5 +1,7 @@
 from django.db import models
 
+#Classi per la definizione della struttura delle tabelle da generare su PostgreSQL
+
 class Cittadino(models.Model):
     CSSN = models.CharField(max_length=20, primary_key=True)
     nome = models.CharField(max_length=50)
@@ -9,7 +11,7 @@ class Cittadino(models.Model):
     indirizzo = models.CharField(max_length=200, null=True, blank=True)
 
     class Meta:
-        db_table = 'Cittadino'
+        db_table = 'Cittadino' #Istruzione per forzare il nome della tabella nel database Postgres
    
 class Ospedale(models.Model):
     codice = models.CharField(max_length=20, primary_key=True)
@@ -19,7 +21,7 @@ class Ospedale(models.Model):
     direttoreSanitario = models.ForeignKey(Cittadino, on_delete=models.PROTECT, db_column='direttoreSanitario')
     
     class Meta:
-        db_table = 'Ospedale'
+        db_table = 'Ospedale' #Istruzione per forzare il nome della tabella nel database Postgres
 
 class Patologia(models.Model):
     cod = models.CharField(max_length=10, primary_key=True)
@@ -27,19 +29,19 @@ class Patologia(models.Model):
     criticità = models.IntegerField()
 
     class Meta:
-        db_table = 'Patologia'
+        db_table = 'Patologia' #Istruzione per forzare il nome della tabella nel database Postgres
 
 class PatologiaCronica(models.Model):
     codPatologia = models.OneToOneField(Patologia, primary_key=True, on_delete=models.CASCADE,db_column='codPatologia')
 
     class Meta:
-        db_table = 'PatologiaCronica'
+        db_table = 'PatologiaCronica' #Istruzione per forzare il nome della tabella nel database Postgres
 
 class PatologiaMortale(models.Model):
     codPatologia = models.OneToOneField(Patologia, primary_key=True, on_delete=models.CASCADE,db_column='codPatologia')
 
     class Meta:
-        db_table = 'PatologiaMortale'
+        db_table = 'PatologiaMortale' #Istruzione per forzare il nome della tabella nel database Postgres
 
 class Ricovero(models.Model):
     cod = models.CharField(max_length=10, primary_key=True)
@@ -51,7 +53,7 @@ class Ricovero(models.Model):
     costo = models.DecimalField(max_digits=10, decimal_places=2)
 
     class Meta:
-        db_table = 'Ricovero'
+        db_table = 'Ricovero' #Istruzione per forzare il nome della tabella nel database Postgres
 
 class PatologiaRicovero(models.Model):
     codOspedale = models.ForeignKey('Ospedale', on_delete=models.CASCADE, db_column='codOspedale')
@@ -61,6 +63,6 @@ class PatologiaRicovero(models.Model):
 
     class Meta:
         unique_together = ('codOspedale', 'codRicovero', 'codPatologia')
-        db_table = 'PatologiaRicovero'
+        db_table = 'PatologiaRicovero' #Istruzione per forzare il nome della tabella nel database Postgres
         managed = False
 
