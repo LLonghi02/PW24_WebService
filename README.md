@@ -49,7 +49,7 @@ Lazzari Alessia (1078863)</h6>
             <li>
                 Aprire il terminale
                 <ul>
-                    <li>Fare clic con il tasto destro sulla cartella PW24_WebService appena estratta e selezionare “Apri nel terminale”</li>
+                    <li>Aprire il prompt dei comandi (attenzione NON deve essere Windows PowerShell)</li>
                 </ul>
             </li>
             <li>
