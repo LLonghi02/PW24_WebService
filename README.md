@@ -23,8 +23,8 @@ Lazzari Alessia (1078863)</h6>
                     <li>Comando windows+R → Aprire: services.msc</li>
                     <li>Click col tasto destro su “Apache Tomcat 10.1 Tomcat10” (o simile in base alla versione presente sul sistema) → avvia</li>
                     <li>
-                        Copiare la cartella “Servlet” presente al percorso 
-                        <code>C:\...\PW24_WebService\PW24_SSanitario</code> 
+                        Copiare la cartella “AppWeb” presente al percorso 
+                        <code>C:\...\PW24_WebService\PW24_SSanitario\Servlet</code> 
                         nella cartella 
                         <code>C:\Tomcat\webapps</code> 
                         presente nel tuo sistema
