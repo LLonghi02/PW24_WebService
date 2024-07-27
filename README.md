@@ -23,7 +23,7 @@ Lazzari Alessia (1078863)</h6>
                     <li>Comando windows+R → Aprire: services.msc</li>
                     <li>Click col tasto destro su “Apache Tomcat 10.1 Tomcat10” (o simile in base alla versione presente sul sistema) → avvia</li>
                     <li>
-                        Copiare la cartella “AppWeb” presente al percorso <code>"C:\Program Files\Apache Software Foundation\Tomcat 10.1\webapps"</code> nella cartella <code>"C:\...\Tomcat 10.1\webapps"</code> presente nel tuo sistema
+                        Copiare la cartella “AppWeb” presente al percorso <code>"C:\...\PW24_WebService-main\PW24_SSanitario\Servlet"</code> nella cartella <code>"C:\Program Files\Apache Software Foundation\Tomcat 10.1\webapps"</code> presente nel tuo sistema
                     </li>
                 </ul>
             </li>
