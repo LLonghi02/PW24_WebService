@@ -22,4 +22,4 @@ from importer.views import migrate
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('fetch-and-save/', fetch_and_save, name='fetch_and_save'), #Mapping dell'applicazione per recuperare i dati dalla servlet e salvarli sul database
-    path('run-migrations/', migrate, name='run-migrations'), #Mapping della view utilizzata per eseguire la migrazione dei dati]
+    path('run-migrations/', migrate, name='run-migrations'),] #Mapping della view utilizzata per eseguire la migrazione dei dati
