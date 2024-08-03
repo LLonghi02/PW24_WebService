@@ -44,7 +44,7 @@ Lazzari Alessia (1078863)</h6>
                         <code>C:\...\PW24_WebService-main\PW24_SSanitario\PW24_SSanitario</code>
                             , in un editor di testo
                     </li>
-                    <li>Modificare DATABASES alla riga 80 con il tuo USER e la tua PASSWORD</li>
+                    <li>Modificare DATABASES alla riga 80 con la propria PASSWORD</li>
                 </ul>
             </li>
             <li>
