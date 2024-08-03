@@ -31,7 +31,7 @@ Lazzari Alessia (1078863)</h6>
                 Creare un Database PostgreSQL
                 <ul>
                     <li>Aprire “pgAdmin4”</li>
-                    <li>Aprire il tuo Server</li>
+                    <li>Aprire Servers</li>
                     <li>Fare clic con il tasto destro su Databases → Create → Database…</li>
                     <li>Chiamare il Database “ServSanitario” e salvare</li>
                 </ul>
